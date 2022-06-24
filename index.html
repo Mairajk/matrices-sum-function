@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> ES 6  Function ( Matrics SUM Function )</h1>
+
+
+
+
+    <script>
+        function matricesSum( a , b  ) {
+            // let a = +document.querySelector(`#m1-${i}-${j}`).value ;
+            // let b = +document.querySelector(`#m2-${i}-${j}`).value ;
+
+            for (let i = 0; i < a.length ; i++) {
+                for (let j = 0; j < b.length ; j++) {
+                   
+
+                    // document.querySelector(`#mResult-${i}-${j}`).value =
+                    //     +document.querySelector(`#m1-${i}-${j}`).value
+                    //     +
+                    //     +document.querySelector(`#m2-${i}-${j}`).value;
+                    let r = ( a[i][j] + b[i][j] ) ;
+                    // let r = result[i][j] 
+                    return r ;
+           
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
