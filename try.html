@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> for function </title>
+</head>
+<body>
+    <h1> Matrices Calculator </h1>
+    <form action="" onsubmit="start() ; return false ;">
+        <input type="number" required autofocus id="numOfRows" min="0" max="100">
+        <input type="number" required autofocus id="numOfCols" min="0" max="100">
+        <select name="" id="operators">
+            <option value="*">X</option>
+            <option value="+">+</option>
+            <option value="-">-</option>  
+        </select>
+        <button type="submit">Start</button>
+    </form>
+    <form action="" onsubmit="calculate() ; return false ;">
+        <div id="mat1"></div>
+        <div id="sign"></div>
+        <div id="mat2"></div>
+        <div id="equal"></div>
+        <div id="result"></div>
+        <button>Calculate</button>
+    </form>
+    <script src="mat.js"></script>
+</body>
+</html>

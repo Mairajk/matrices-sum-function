@@ -7,33 +7,44 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h1> Matrices Calculator </h1>
     
-    <h1> ES 6  Function ( Matrics SUM Function )</h1>
+    <form onsubmit="start(); return false">
+
+        <input type="number" required min="2" id="input1">
+        X
+        <input type="number" required min="2" id="input2">
+        
+                <select name="" id="operators">
+                    <option value="+"> + </option>
+                    <option value="-"> - </option>
+                    <option value="X"> X </option>
+                    <!-- <option value="/"> / </option> -->
+                </select>
+        <button type="submit">Start</button>
+        <div id="message"></div>
+    </form>
+
+    <br>
+    <br>
+
+    <!-- Matrix input form -->
+    <form onsubmit="sum(); return false" class="hidden" id="metrixInputForm">
+
+        <div id="mInput1" class="mInput"></div>
+        <div id="sign"></div>
+        <div id="mInput2" class="mInput"></div>
+        <button>Submit</button>
+
+        <div id="mResult" class="mInput"></div>
+
+    </form>
+
+
+    <script src="func.js">  </script>
 
 
 
-
-    <script>
-        function matricesSum( a , b  ) {
-            // let a = +document.querySelector(`#m1-${i}-${j}`).value ;
-            // let b = +document.querySelector(`#m2-${i}-${j}`).value ;
-
-            for (let i = 0; i < a.length ; i++) {
-                for (let j = 0; j < b.length ; j++) {
-                   
-
-                    // document.querySelector(`#mResult-${i}-${j}`).value =
-                    //     +document.querySelector(`#m1-${i}-${j}`).value
-                    //     +
-                    //     +document.querySelector(`#m2-${i}-${j}`).value;
-                    let r = ( a[i][j] + b[i][j] ) ;
-                    // let r = result[i][j] 
-                    return r ;
-           
-                }
-            }
-
-        }
-    </script>
 </body>
 </html>
