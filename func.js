@@ -3,7 +3,7 @@ let input2 = "";
 
 function start() {
 
-    let message = document.querySelector("#message")
+    // let message = document.querySelector("#message")
     let mInput1 = document.querySelector("#mInput1")
     let mInput2 = document.querySelector("#mInput2")
     let mResult = document.querySelector("#mResult")
@@ -53,7 +53,7 @@ function start() {
 }
 
 
-function sum() {
+function calculation() {
 
     let matrix1 = [];
     let matrix2 = [];

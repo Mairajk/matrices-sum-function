@@ -1,0 +1,18 @@
+body{
+    background-image: url(./download\ \(3\).jpg);
+    font-size: 200%;
+}
+
+#startForm{
+    display: flex ;
+    flex-wrap: wrap ;
+    justify-content: center ;
+}
+#start{
+    /* display: flex; */
+    align-self: flex-end;
+}
+input{
+    background-color: black;
+    color: aliceblue;
+}
