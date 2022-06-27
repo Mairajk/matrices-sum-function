@@ -71,35 +71,30 @@ function calculation() {
 
     let operators = document.querySelector(`#operators`).value ;
     
+
+    let result = "" ;
+
 if (operators === `+` ) {
 
-        let result = sumMatrix(matrix1, matrix2);                
-        for (let i = 0; i < result.length; i++) {
-        for (let j = 0; j < result[i].length; j++) {
-            document.querySelector(`#mResult-${i}-${j}`).value = result[i][j];
-        }
-    }
+         result = sumMatrix(matrix1, matrix2);                
+   
 }
 
 if  (operators === `-`) {
         
-        let result = subMatrix(matrix1, matrix2) ;
-        for (let i = 0; i < result.length; i++) {
-        for (let j = 0; j < result[i].length; j++) {
-            document.querySelector(`#mResult-${i}-${j}`).value = result[i][j];
-        }
-    }
+         result = subMatrix(matrix1, matrix2) ;
+   
 }
 
 if (operators === `X`) {
     
-    let result = multiplyMatrix(matrix1, matrix2) ;
+     result = multiplyMatrix(matrix1, matrix2) ;
+    }
         for (let i = 0; i < result.length; i++) {
         for (let j = 0; j < result[i].length; j++) {
             document.querySelector(`#mResult-${i}-${j}`).value = result[i][j];
         }
     }
-}
 
 }
 
