@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h1> Matrices Calculator </h1>
-    
-    <form onsubmit="start(); return false">
 
-        <input type="number" required min="2" id="input1">
-        X
-        <input type="number" required min="2" id="input2">
-        
-                <select name="" id="operators">
-                    <option value="+"> + </option>
-                    <option value="-"> - </option>
-                    <option value="X"> X </option>
-                </select>
+    <form onsubmit="start(); return false" id="firstForm">
+
+        <div id="input1Div">
+            <input type="number" required min="2" id="input1" placeholder="Enter number of Rows" class="iRC">
+
+            <input type="number" required min="2" id="input2" placeholder="Enter number of Columns" class="iRC">
+        </div>
+        <select name="" id="operators">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="X"> X </option>
+        </select>
+        <br>
         <button type="submit">Start</button>
         <div id="message"></div>
     </form>
@@ -29,7 +33,7 @@
     <br>
     <br>
 
-  
+
     <form onsubmit="calculation(); return false" class="hidden" id="metrixInputForm">
 
         <div id="mInput1" class="mInput"></div>
@@ -47,4 +51,5 @@
 
 
 </body>
+
 </html>

@@ -45,10 +45,10 @@ function start() {
         mResult.innerHTML += `<br>`;
     }
     document.querySelector("#metrixInputForm").classList.remove("hidden");
-    let sign = document.querySelector(`#sign`) ;
-    let operators = document.querySelector(`#operators`).value ;
+    let sign = document.querySelector(`#sign`);
+    let operators = document.querySelector(`#operators`).value;
 
-   sign.innerHTML = operators ; 
+    sign.innerHTML = operators;
 
 }
 
@@ -69,28 +69,28 @@ function calculation() {
         }
     }
 
-    let operators = document.querySelector(`#operators`).value ;
-    
+    let operators = document.querySelector(`#operators`).value;
 
-    let result = "" ;
 
-if (operators === `+` ) {
+    let result = "";
 
-         result = sumMatrix(matrix1, matrix2);                
-   
-}
+    if (operators === `+`) {
 
-if  (operators === `-`) {
-        
-         result = subMatrix(matrix1, matrix2) ;
-   
-}
+        result = sumMatrix(matrix1, matrix2);
 
-if (operators === `X`) {
-    
-     result = multiplyMatrix(matrix1, matrix2) ;
     }
-        for (let i = 0; i < result.length; i++) {
+
+    if (operators === `-`) {
+
+        result = subMatrix(matrix1, matrix2);
+
+    }
+
+    if (operators === `X`) {
+
+        result = multiplyMatrix(matrix1, matrix2);
+    }
+    for (let i = 0; i < result.length; i++) {
         for (let j = 0; j < result[i].length; j++) {
             document.querySelector(`#mResult-${i}-${j}`).value = result[i][j];
         }
@@ -122,17 +122,17 @@ function subMatrix(matrix1, matrix2) {
 }
 
 function multiplyMatrix(matrix1, matrix2) {
-var aNumRows = matrix1.length, aNumCols = matrix1[0].length,
-bNumRows = matrix2.length, bNumCols = matrix2[0].length,
-result = new Array(aNumRows);  // initialize array of rows
-for (var r = 0; r < aNumRows; ++r) {
-result[r] = new Array(bNumCols); // initialize the current row
-for (var c = 0; c < bNumCols; ++c) {
-    result[r][c] = 0;             // initialize the current cell
-    for (var i = 0; i < aNumCols; ++i) {
-        result[r][c] += matrix1[r][i] * matrix2[i][c];
+    var aNumRows = matrix1.length, aNumCols = matrix1[0].length,
+        bNumRows = matrix2.length, bNumCols = matrix2[0].length,
+        result = new Array(aNumRows);  // initialize array of rows
+    for (var r = 0; r < aNumRows; ++r) {
+        result[r] = new Array(bNumCols); // initialize the current row
+        for (var c = 0; c < bNumCols; ++c) {
+            result[r][c] = 0;             // initialize the current cell
+            for (var i = 0; i < aNumCols; ++i) {
+                result[r][c] += matrix1[r][i] * matrix2[i][c];
+            }
+        }
     }
-}
-}
-return result;
+    return result;
 }
